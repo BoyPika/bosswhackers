@@ -20,7 +20,6 @@
         ]
     },
     "depends": {
-        "fabricloader": ">=${fabric_loader_version}",
         "fabric-api": "*",
         "java": ">=17"
     }

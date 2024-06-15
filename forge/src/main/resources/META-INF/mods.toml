@@ -10,9 +10,9 @@ logoFile = "assets/bosswhackers/textures/item/wither_whacker.png"
 credits = "${credits}"
 authors = "${mod_author}"
 description = '''${description}'''
-[[dependencies.${mod_id}]]
-modId = "minecraft"
-mandatory = true
-versionRange = "1.20.4"
-ordering = "NONE"
-side = "BOTH"
+#[[dependencies.${mod_id}]]
+#modId = "minecraft"
+#mandatory = true
+#versionRange = "1.20.3"
+#ordering = "NONE"
+#side = "BOTH"
