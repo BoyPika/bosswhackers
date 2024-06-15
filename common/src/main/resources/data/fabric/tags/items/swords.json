@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "bosswhackers:wither_whacker",
+    "bosswhackers:dragon_whacker",
+    "bosswhackers:warden_whacker"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "creativetab.whackers": "Boss-Whackers",
+  "item.bosswhackers.wither_whacker": "Wither-Whacker",
+  "item.bosswhackers.dragon_whacker": "Drache-Whacker",
+  "item.bosswhackers.warden_whacker": "Wärter-Whacker",
+  "text.item.bosswhackers.event_fail_message.dragon_whacker": "Dieses Schwert funktioniert nur auf den Enderdrache",
+  "text.item.bosswhackers.event_fail_message.warden_whacker": "Dieses Schwert funktioniert nur auf den Wärter",
+  "text.item.bosswhackers.event_fail_message.wither_whacker": "Dieses Schwert funktioniert nur auf den Wither",
+}
