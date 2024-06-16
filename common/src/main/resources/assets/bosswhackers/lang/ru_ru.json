@@ -1,0 +1,9 @@
+{
+  "creativetab.whackers": "Убийца босса",
+  "item.bosswhackers.dragon_whacker": "Убийца дракона",
+  "item.bosswhackers.warden_whacker": "Убийца хранителей",
+  "item.bosswhackers.wither_whacker": "Убийца Иссушителя",
+  "text.item.bosswhackers.event_fail_message.dragon_whacker": "Этот меч работает только на Драконе Края",
+  "text.item.bosswhackers.event_fail_message.warden_whacker": "Этот меч работает только на Хранителе",
+  "text.item.bosswhackers.event_fail_message.wither_whacker": "Этот меч работает только на Иссушителя"
+}
