@@ -11,8 +11,9 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Objects;
 
 public class DragonWhacker extends SwordItem {
-    public DragonWhacker(Tier tier, int attackDamage, float attackSpeed, Properties properties){
-        super(tier, attackDamage, attackSpeed, properties);
+
+    public DragonWhacker(Tier tier, Properties properties) {
+        super(tier, properties);
     }
 
     @Override

@@ -20,13 +20,13 @@ public class BossWhackers implements ModInitializer {
 
     public static void registerItems() {
         if (config().WitherWhacker){
-            WITHER_WHACKER = new WitherWhacker(Tiers.DIAMOND, -3, -3.5f, new Item.Properties().rarity(Rarity.UNCOMMON));
+            WITHER_WHACKER = new WitherWhacker(Tiers.DIAMOND, new Item.Properties().rarity(Rarity.UNCOMMON).attributes(SwordItem.createAttributes(Tiers.DIAMOND, -3, -3.5f)));
         }
         if (config().DragonWhacker){
-            DRAGON_WHACKER = new DragonWhacker(Tiers.NETHERITE, -4,-3.9f, new Item.Properties().fireResistant().rarity(Rarity.EPIC));
+            DRAGON_WHACKER = new DragonWhacker(Tiers.NETHERITE, new Item.Properties().fireResistant().rarity(Rarity.EPIC).attributes(SwordItem.createAttributes(Tiers.NETHERITE, -4, -3.9f)));
         }
         if (config().WardenWhacker){
-            WARDEN_WHACKER = new WardenWhacker(Tiers.NETHERITE, -4, -3.6f, new Item.Properties().fireResistant().rarity(Rarity.RARE));
+            WARDEN_WHACKER = new WardenWhacker(Tiers.NETHERITE, new Item.Properties().fireResistant().rarity(Rarity.RARE).attributes(SwordItem.createAttributes(Tiers.NETHERITE, -4, -3.6f)));
         }
     }
 
@@ -46,7 +46,7 @@ public class BossWhackers implements ModInitializer {
             Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Constants.MOD_ID, "warden_whacker"), WARDEN_WHACKER);
             ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(entries -> entries.addAfter(Items.NETHERITE_SWORD, WARDEN_WHACKER));
         }
-        System.out.println("[1.20.3 - 1.20.4] Boss Whackers Init");
+        System.out.println("[1.20.5] Boss Whackers Init");
     }
     public static ModConfig config() {
         return (ModConfig) ConfigManager.get(Constants.MOD_ID);

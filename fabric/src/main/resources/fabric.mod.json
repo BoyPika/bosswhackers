@@ -8,20 +8,20 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "sources": "https://github.com/BoyPika/bosswhackers",
+        "issues": "https://github.com/BoyPika/bosswhackers/issues"
     },
     "license": "${license}",
     "icon": "assets/bosswhackers/textures/item/wither_whacker.png",
     "environment": "*",
     "entrypoints": {
         "main": [
-          "net.boypika.BossWhackers"
+            "net.boypika.BossWhackers"
         ]
     },
     "depends": {
         "fabric-api": "*",
-        "java": ">=17"
+        "minecraft": "${minecraft_version}"
     }
 }
   

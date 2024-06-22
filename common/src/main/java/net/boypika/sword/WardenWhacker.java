@@ -11,8 +11,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Objects;
 
 public class WardenWhacker extends SwordItem {
-    public WardenWhacker(Tier tier, int attackDamage, float attackSpeed, Properties properties){
-        super(tier, attackDamage, attackSpeed, properties);
+    public WardenWhacker(Tier tier, Properties properties){
+        super(tier, properties);
     }
 
     @Override
