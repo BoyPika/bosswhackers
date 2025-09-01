@@ -5,9 +5,13 @@ import net.boypika.sword.DragonWhacker;
 import net.boypika.sword.WardenWhacker;
 import net.boypika.sword.WitherWhacker;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import top.offsetmonkey538.monkeyconfig538.ConfigManager;
@@ -30,23 +34,32 @@ public class BossWhackers implements ModInitializer {
         }
     }
 
+    public static final CreativeModeTab CREATIVE_MODE_TAB = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(WITHER_WHACKER))
+            .title(Component.translatable("creativetab.whackers"))
+            .build();
+
     @Override
     public void onInitialize() {
         ConfigManager.init(new ModConfig(), Constants.MOD_ID);
         registerItems();
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "swords"), CREATIVE_MODE_TAB);
         if (config().WitherWhacker){
-            Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Constants.MOD_ID, "wither_whacker"), WITHER_WHACKER);
+            Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "wither_whacker"), WITHER_WHACKER);
             ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(entries -> entries.addAfter(Items.NETHERITE_SWORD, WITHER_WHACKER));
+            ItemGroupEvents.modifyEntriesEvent(ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "swords"))).register(entries -> entries.accept(WITHER_WHACKER));
         }
         if (config().DragonWhacker) {
-            Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Constants.MOD_ID, "dragon_whacker"), DRAGON_WHACKER);
+            Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "dragon_whacker"), DRAGON_WHACKER);
             ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(entries -> entries.addAfter(Items.NETHERITE_SWORD, DRAGON_WHACKER));
+            ItemGroupEvents.modifyEntriesEvent(ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "swords"))).register(entries -> entries.accept(DRAGON_WHACKER));
         }
         if (config().WardenWhacker) {
-            Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Constants.MOD_ID, "warden_whacker"), WARDEN_WHACKER);
+            Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "warden_whacker"), WARDEN_WHACKER);
             ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(entries -> entries.addAfter(Items.NETHERITE_SWORD, WARDEN_WHACKER));
+            ItemGroupEvents.modifyEntriesEvent(ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "swords"))).register(entries -> entries.accept(WARDEN_WHACKER));
         }
-        System.out.println("[1.20.5] Boss Whackers Init");
+        System.out.println("[1.21(.1)] Boss Whackers Init");
     }
     public static ModConfig config() {
         return (ModConfig) ConfigManager.get(Constants.MOD_ID);

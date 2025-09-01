@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " N ",
-    "NWN",
-    " E "
+    " D ",
+    "NNN",
+    " W "
   ],
   "key": {
     "N": {
       "item": "minecraft:nether_star"
     },
-    "E": {
-      "item": "minecraft:dragon_egg"
+    "D": {
+      "item": "minecraft:dragon_breath"
     },
     "W": {
       "item": "bosswhackers:wither_whacker"
