@@ -3,16 +3,17 @@ package net.boypika.sword;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ToolMaterial;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
 public class WitherWhacker extends SwordItem {
-    public WitherWhacker(Tier tier, Properties properties){
-        super(tier, properties);
+    public WitherWhacker(ToolMaterial toolMaterial, float attackDamage, float attackSpeed, Properties properties){
+        super(toolMaterial, attackDamage, attackSpeed, properties);
     }
 
     @Override
@@ -21,7 +22,7 @@ public class WitherWhacker extends SwordItem {
             target.hurt(Objects.requireNonNull(target.getLastDamageSource()), 100000000000f);
         }
         else {
-            attacker.sendSystemMessage(Component.translatable("text.item.bosswhackers.event_fail_message.wither_whacker"));
+            ((Player) attacker).displayClientMessage(Component.translatable("text.item.bosswhackers.event_fail_message.wither_whacker"), true);
             target.heal(1f);
         }
         return true;

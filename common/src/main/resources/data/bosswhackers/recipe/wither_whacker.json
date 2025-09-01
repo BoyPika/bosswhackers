@@ -6,15 +6,15 @@
     " S "
   ],
   "key": {
-    "N": {
-      "item": "minecraft:nether_star"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    },
-    "I": {
-      "item": "minecraft:netherite_block"
-    }
+    "N": [
+      "minecraft:nether_star"
+    ],
+    "S": [
+      "minecraft:stick"
+    ],
+    "I": [
+      "minecraft:netherite_block"
+    ]
   },
   "result": {
     "id": "bosswhackers:wither_whacker"

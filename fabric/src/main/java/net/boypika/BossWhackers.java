@@ -24,13 +24,13 @@ public class BossWhackers implements ModInitializer {
 
     public static void registerItems() {
         if (config().WitherWhacker){
-            WITHER_WHACKER = new WitherWhacker(Tiers.DIAMOND, new Item.Properties().rarity(Rarity.UNCOMMON).attributes(SwordItem.createAttributes(Tiers.DIAMOND, -3, -3.5f)));
+            WITHER_WHACKER = new WitherWhacker(ToolMaterial.DIAMOND,-3, -3.5f, new Item.Properties().rarity(Rarity.UNCOMMON).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "wither_whacker"))));
         }
         if (config().DragonWhacker){
-            DRAGON_WHACKER = new DragonWhacker(Tiers.NETHERITE, new Item.Properties().fireResistant().rarity(Rarity.EPIC).attributes(SwordItem.createAttributes(Tiers.NETHERITE, -4, -3.9f)));
+            DRAGON_WHACKER = new DragonWhacker(ToolMaterial.NETHERITE,-4, -3.9f, new Item.Properties().fireResistant().rarity(Rarity.EPIC).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "dragon_whacker"))));
         }
         if (config().WardenWhacker){
-            WARDEN_WHACKER = new WardenWhacker(Tiers.NETHERITE, new Item.Properties().fireResistant().rarity(Rarity.RARE).attributes(SwordItem.createAttributes(Tiers.NETHERITE, -4, -3.6f)));
+            WARDEN_WHACKER = new WardenWhacker(ToolMaterial.NETHERITE, -4, -3.6f, new Item.Properties().fireResistant().rarity(Rarity.RARE).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "warden_whacker"))));
         }
     }
 
@@ -59,7 +59,7 @@ public class BossWhackers implements ModInitializer {
             ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(entries -> entries.addAfter(Items.NETHERITE_SWORD, WARDEN_WHACKER));
             ItemGroupEvents.modifyEntriesEvent(ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "swords"))).register(entries -> entries.accept(WARDEN_WHACKER));
         }
-        System.out.println("[1.21(.1)] Boss Whackers Init");
+        System.out.println("[1.21.2(.3)] Boss Whackers Init");
     }
     public static ModConfig config() {
         return (ModConfig) ConfigManager.get(Constants.MOD_ID);

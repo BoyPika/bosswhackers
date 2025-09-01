@@ -6,15 +6,15 @@
     " W "
   ],
   "key": {
-    "N": {
-      "item": "minecraft:nether_star"
-    },
-    "D": {
-      "item": "minecraft:dragon_breath"
-    },
-    "W": {
-      "item": "bosswhackers:wither_whacker"
-    }
+    "N": [
+      "minecraft:nether_star"
+    ],
+    "D": [
+      "minecraft:dragon_breath"
+    ],
+    "W": [
+      "bosswhackers:wither_whacker"
+    ]
   },
   "result": {
     "id": "bosswhackers:dragon_whacker"

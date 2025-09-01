@@ -6,15 +6,15 @@
     " S "
   ],
   "key": {
-    "E": {
-      "item": "minecraft:enchanted_golden_apple"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    },
-    "D": {
-      "item": "minecraft:music_disc_otherside"
-    }
+    "E": [
+      "minecraft:enchanted_golden_apple"
+    ],
+    "S": [
+      "minecraft:stick"
+    ],
+    "D": [
+      "minecraft:music_disc_otherside"
+    ]
   },
   "result": {
     "id": "bosswhackers:warden_whacker"
