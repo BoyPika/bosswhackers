@@ -15,7 +15,7 @@ dependencies {
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
-    modImplementation include('com.github.BoyPika:MonkeyConfig538-master:ca245421ad')
+    modImplementation include('com.github.BoyPika:MonkeyConfig538-master:c36660d435')
 }
 
 loom {
